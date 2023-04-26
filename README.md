@@ -4,30 +4,19 @@
 
 **Evaluación 2023, aspirantes extranjeros**
 
-Las instrucciones son las siguientes:
+**Presentado por: Ricardo Ortega Bolaños**
 
-1. Ve a la pagina de Github del examen https://github.com/mcd-unison/examen-prog y realiza un *Fork* en tu cuenta propia.
-2. Clona el repositorio en tu computadora para que tengas acceso de forma local. Para el resto del problema podrás usar el lenguaje de tu preferencia.
-3. En la dirección https://www.gob.mx/salud/documentos/datos-abiertos-152127 se puede consultar el archivo que viene el el apartado *Base de Datos* con los datos de la evolución de COVID en México. 
-4. Realiza un programa (o una libreta jupyter) que haga lo siguiente:
+El presente repositorio tiene una carpeta `src` donde se encuentra una imagen, un archivo comprimido y un notebook Jupyter, este ultimo fue construido tanto en VSCode como en Colab (debido a lo recursos computacionales con los que contaba).
 
-    1. Descarga el archivo de datos de COVID. Posiblemente tengas que descargar el diccionario de datos para revisarlo.
-    2. Genera una figura con 3 gráficas, las cuales sean la letalidad semanal de COVID a lo largo de la pandemia para México, el estado de Sonora, y el municipio de Hermosillo (en Sonora). Seguramente tendrás que consultar el diccionario de datos que se descarga como archivo independiente del mismo sitio. Guardalo en un archivo llamado `figura.png`.
-    3. Genera una tabla con el número de ingresados, el número de decesos y el indice de letalidad, pero ahora calculado por grupo etáreo (eres libre de seleccionar los rangos, pero uno podría ser de 0 a 18 años, de 18 a 30 años, de 30 a 60 años y mayores de 60 años). Guardala en el archivo `tabla.csv.zip`.
-5. Modifica el archivo README.org, en el que se explique que se realiza en el repositorio.
-6. Realizar un commit y actualiza el repositorio.
-7. Sube en tu examen un enlace a tu repositorio.
+El notebook (`notebook_Ricardo.ipynb`) contiene (de manera general) lo siguiente:
+
+1. Se descarga y se lee una [Base de Datos](https://www.gob.mx/salud/documentos/datos-abiertos-152127) con los datos de la evolución de COVID en México.
+
+2. Se genera una figura con 3 gráficas, las cuales son la letalidad semanal de COVID a lo largo de la pandemia para México, el estado de Sonora, y el municipio de Hermosillo (en Sonora). Adicionalmente se guarda dicha figura como `figura.png`.
+
+3. Se genera una tabla (dataframe) con el número de ingresados, el número de decesos y el indice de letalidad, calculado por grupo etáreo. Los rangos de edad elegidos son de 0 a 18 años, de 18 a 30 años, de 30 a 60 años y mayores de 60 años. Adicionalmente se guarda el dataframe como `tabla.csv.zip`.
+
+
+**Para calcular la letalidad se tuvo en cuenta el siguiente enunciado:**
 
 La letalidad se calcula como el acumulado de pacientes que fueron ingresados respecto a la cantidad de pacientes que al final causaron una lamentable defunción. En este caso los acumulados (para la figura) los estamos tomando por semana y únicamente con la fecha de ingreso al sistema hospitalario. Estos son datos únicamente de pacientes que fueron ingresados a hospitalización. La letalidad nos da una idea de la agresividad del virus, sin que esto refleje numeros en forma global (para eso se utiliza el indicador de mortalidad por cada 100 mil habitantes). Toma en cuenta que la única forma de saber si un paciente causo defunción, es porque tiene una fecha de deceso (afortunadamente la gran mayora no tiene fecha de deceso).
-
-En la evaluación se tomará en cuenta:
-
-1. La calidad del código realizado.
-2. La documentación del código y de los datos.
-3. La solución para realizar las tablas y las gráficas solicitadas.
-4. La calidad de las gráficas.
-
-
-Cualquier problema, por favor comunicarse con mcd@unison.mx, estaremos pendientes todo el día para contestar a sus inquietudes.
-
-Mucho éxito.
